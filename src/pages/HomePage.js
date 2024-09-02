@@ -22,6 +22,9 @@ const HomePage = () => {
       <section id="galerie">
         <GallerySlider />
       </section>
+      <section id="testimoniale">
+        <Testimonials />
+      </section>
       <section id="contact">
         <Contact />
       </section>
