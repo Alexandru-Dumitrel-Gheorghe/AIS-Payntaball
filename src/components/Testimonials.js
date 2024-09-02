@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../styles/Testimonials.module.css";
-import { FaUser, FaStar, FaClock } from "react-icons/fa"; // Import icons
+import { FaUser, FaStar, FaClock } from "react-icons/fa";
 
 const testimonials = [
   {
