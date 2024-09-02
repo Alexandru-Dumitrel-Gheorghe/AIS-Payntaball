@@ -4,7 +4,7 @@ import WelcomeSection from "../components/WelcomeSection";
 import AboutUs from "../components/AboutUs";
 import Packages from "../components/Packages";
 import GallerySlider from "../components/GallerySlider";
-import Testimonials from "../components/Testimonials";
+import Testimonials from "../components/Testimonials"; // Importing Testimonials
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 
@@ -23,7 +23,7 @@ const HomePage = () => {
         <GallerySlider />
       </section>
       <section id="testimoniale">
-        <Testimonials />
+        <Testimonials /> {/* Add Testimonials section here */}
       </section>
       <section id="contact">
         <Contact />
