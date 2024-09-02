@@ -1,5 +1,3 @@
-/* GallerySlider.module.css */
-
 .gallerySection {
   padding: 60px 20px;
   background: linear-gradient(135deg, #1e1e1e 50%, #ff4a4a 100%);
@@ -30,8 +28,10 @@
   border: none;
   color: white;
   font-size: 24px;
-  width: 50px; /* Egalează lățimea și înălțimea pentru a le face rotunde */
-  height: 50px; /* Egalează lățimea și înălțimea pentru a le face rotunde */
+  min-width: 50px; /* Utilizează min-width și min-height pentru a păstra proporțiile */
+  min-height: 50px;
+  width: 50px; /* Lățime și înălțime pentru a asigura proporții constante */
+  height: 50px;
   border-radius: 50%; /* 50% pentru a face butonul perfect rotund */
   cursor: pointer;
   position: absolute;
@@ -39,6 +39,7 @@
   transform: translateY(-50%);
   z-index: 10;
   transition: background-color 0.3s ease, transform 0.3s ease;
+  box-sizing: border-box; /* Asigură-te că dimensiunile sunt calculate corect */
 }
 
 .prevButton {
@@ -92,6 +93,8 @@
 
   .prevButton,
   .nextButton {
+    min-width: 40px;
+    min-height: 40px;
     width: 40px;
     height: 40px;
   }

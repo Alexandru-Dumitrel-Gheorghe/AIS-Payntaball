@@ -84,9 +84,12 @@
   }
 }
 
-.ctaButton {
+.callButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 15px 30px;
-  background-color: #ff0066;
+  background-color: #00bfa5;
   color: white;
   border: none;
   cursor: pointer;
@@ -94,12 +97,17 @@
   border-radius: 50px;
   transition: background-color 0.3s ease, transform 0.3s ease;
   margin-bottom: 20px;
-  box-shadow: 0 8px 20px rgba(255, 0, 102, 0.5);
+
+  text-decoration: none;
 }
 
-.ctaButton:hover {
+.callButton:hover {
   background-color: #e6005c;
   transform: translateY(-7px);
+}
+
+.phoneIcon {
+  margin-right: 10px;
 }
 
 .info {
@@ -121,7 +129,7 @@
     font-size: 16px;
   }
 
-  .ctaButton {
+  .callButton {
     font-size: 18px;
     padding: 12px 24px;
   }
@@ -137,7 +145,7 @@
     font-size: 14px;
   }
 
-  .ctaButton {
+  .callButton {
     font-size: 16px;
     padding: 10px 20px;
   }

@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../styles/WelcomeSection.module.css";
+import { FaPhone } from "react-icons/fa"; // Importa iconița de telefon
 
 const WelcomeSection = () => {
   return (
@@ -8,7 +9,9 @@ const WelcomeSection = () => {
       <div className={styles.content}>
         <h1>Compact A.Y.S. Paintball</h1>
         <p>Experiență de paintball de neuitat pentru tine și prietenii tăi!</p>
-        <button className={styles.ctaButton}>Rezervă acum</button>
+        <a href="tel:+40743861562" className={styles.callButton}>
+          <FaPhone className={styles.phoneIcon} /> 0743 861 562
+        </a>
         <div className={styles.info}>
           <p>70 LEI/Participant - Include 200 bile</p>
           <p>Echipament inclus: Marker, Mască, Combinezon</p>
