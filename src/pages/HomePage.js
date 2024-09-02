@@ -22,8 +22,10 @@ const HomePage = () => {
       <section id="galerie">
         <GallerySlider />
       </section>
-      <section id="testimoniale">
-        <Testimonials /> {/* Add Testimonials section here */}
+      <section id="testimonials">
+        {" "}
+        {/* Add Testimonials section */}
+        <Testimonials />
       </section>
       <section id="contact">
         <Contact />
