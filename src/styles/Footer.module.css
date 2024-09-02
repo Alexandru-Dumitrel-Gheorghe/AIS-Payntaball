@@ -1,0 +1,94 @@
+/* Footer.module.css */
+
+.footer {
+  background-color: #1e1e1e;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+  border-top: 2px solid #ff4a4a;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+.logo h2 {
+  font-size: 2em;
+  color: #ff4a4a;
+  margin-bottom: 20px;
+}
+
+.quickLinks h3,
+.socialMedia h3 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #ff4a4a;
+}
+
+.quickLinks ul {
+  list-style: none;
+  padding: 0;
+}
+
+.quickLinks ul li {
+  margin-bottom: 10px;
+}
+
+.quickLinks ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.quickLinks ul li a:hover {
+  color: #ff4a4a;
+}
+
+.socialMedia .icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.socialMedia .icons a {
+  font-size: 1.8em;
+  color: #ff4a4a;
+  transition: color 0.3s ease;
+}
+
+.socialMedia .icons a:hover {
+  color: #ff6f6f;
+}
+
+.copyright {
+  margin-top: 30px;
+  font-size: 0.9em;
+  color: #ccc;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo h2 {
+    font-size: 1.5em;
+  }
+
+  .quickLinks h3,
+  .socialMedia h3 {
+    font-size: 1.2em;
+  }
+
+  .socialMedia .icons a {
+    font-size: 1.5em;
+  }
+}

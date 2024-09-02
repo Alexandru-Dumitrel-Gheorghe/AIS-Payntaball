@@ -1,0 +1,197 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+  font-family: "Arial", sans-serif;
+  background-color: #1e1e1e; /* Fundal întunecat */
+  color: #fff;
+}
+
+.sectionTitle {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #ff4a4a;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 2px;
+  margin-top: 30px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Adăugat text shadow */
+}
+
+.packageContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 50px;
+}
+
+.nft {
+  user-select: none;
+  width: 100%;
+  max-width: 300px;
+  margin: 1rem;
+  border: 1px solid #ffffff22;
+  background-color: #282c34;
+  background: linear-gradient(
+    0deg,
+    rgba(40, 44, 52, 1) 0%,
+    rgba(17, 0, 32, 0.5) 100%
+  );
+  box-shadow: 0 7px 20px 5px #00000088;
+  border-radius: 0.7rem;
+  backdrop-filter: blur(7px);
+  overflow: hidden;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.nft .main {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.nft h3 {
+  color: #ff4a4a;
+  font-size: 1.8em;
+  margin-bottom: 15px;
+}
+
+.description {
+  margin: 0.5rem 0;
+  color: #a89ec9;
+}
+
+.tokenInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  color: #ee83e5;
+  font-weight: 700;
+  font-size: 1.5em;
+}
+
+.duration {
+  color: #a89ec9;
+  font-size: 1em;
+}
+
+hr {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #88888855;
+  margin-top: 0;
+}
+
+.nft:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 30px 10px #000000aa;
+}
+
+.infoContainer {
+  text-align: left; /* Aliniere la stânga pentru text */
+  max-width: 800px;
+  width: 100%;
+  padding: 20px;
+  background-color: #333;
+  border-radius: 15px;
+  margin-bottom: 50px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  border: 2px solid #ff4a4a;
+  word-wrap: break-word; /* Asigură că textul nu va ieși din container */
+}
+
+.infoBlock {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  flex-wrap: wrap; /* Permite iconurilor și textului să se împacheteze pe ecrane mici */
+}
+
+.icon {
+  font-size: 1.5em;
+  color: #ff4a4a;
+  margin-right: 10px;
+  flex-shrink: 0; /* Iconurile vor rămâne de o dimensiune fixă */
+}
+
+.infoText {
+  font-size: 1.2em;
+  margin: 0;
+  color: #fff;
+  flex: 1; /* Textul va ocupa spațiul rămas */
+}
+
+.infoText a {
+  color: #ff4a4a;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.infoText a:hover {
+  color: #ff6f6f;
+}
+
+@media (max-width: 768px) {
+  .packageContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nft {
+    width: 100%;
+    max-width: 90%;
+  }
+
+  .infoContainer {
+    padding: 15px; /* Redus padding-ul pentru a se potrivi mai bine pe ecrane mici */
+  }
+
+  .infoBlock {
+    flex-direction: column; /* Așează iconurile și textul unul sub altul */
+    align-items: flex-start; /* Aliniați la stânga pentru un aspect mai natural */
+    padding: 10px;
+  }
+
+  .icon {
+    font-size: 1.2em; /* Diminuat dimensiunea iconurilor pentru a se potrivi mai bine */
+    margin-bottom: 5px; /* Spațiu între icon și text */
+  }
+
+  .infoText {
+    font-size: 1em; /* Diminuat dimensiunea textului pentru a se potrivi mai bine */
+    margin: 0; /* Eliminat marginea */
+  }
+}
+
+@media (max-width: 480px) {
+  .nft {
+    margin: 1rem 0;
+  }
+
+  .infoContainer {
+    padding: 10px; /* Redus padding-ul pentru a se încadra mai bine */
+  }
+
+  .infoBlock {
+    padding: 8px; /* Redus padding-ul pentru spațiu mai compact */
+  }
+
+  .icon {
+    font-size: 1em; /* Diminuat dimensiunea iconurilor și mai mult */
+    margin-bottom: 5px;
+  }
+
+  .infoText {
+    font-size: 0.9em; /* Diminuat dimensiunea textului pentru a se potrivi mai bine */
+  }
+}

@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+# Compact A.Y.S. Paintball Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This project is a website for Compact A.Y.S. Paintball, a paintball facility in Romania. The website provides an immersive and dynamic experience for users, highlighting the facility's offerings, prices, gallery, and contact information. It is fully responsive and designed to provide a seamless user experience across all devices.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Home Page**: Welcomes users with an eye-catching hero section.
+- **About Us**: Information about the company, its mission, and values.
+- **Packages**: Details of various paintball packages available, displayed in an engaging manner.
+- **Gallery**: A slider showcasing images of the paintball facility and events.
+- **Testimonials**: Reviews from Google, highlighting customer experiences.
+- **Contact Section**: Contact details including location, opening hours, and a prompt to make reservations.
+- **Footer**: Social media links and quick navigation options.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **React**: JavaScript library for building user interfaces.
+- **CSS Modules**: Scoped and modular CSS for styling components.
+- **React Icons**: Icon library for adding social media and other icons.
+- **Unsplash API**: For high-quality images in the gallery (if images were dynamically fetched).
 
-### `npm test`
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To get a local copy up and running, follow these steps:
 
-### `npm run build`
+### Prerequisites
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Node.js and npm should be installed on your machine.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Installation Steps
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/yourusername/paintball-website.git
+   ```
+2. Navigate to the project directory:
+   ```sh
+   cd paintball-website
+   ```
+3. Install NPM packages:
+   ```sh
+   npm install
+   ```
+4. Start the development server:
+   ```sh
+   npm start
+   ```
+5. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### `npm run eject`
+## Project Structure
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Navigate**: Use the top navigation bar to explore different sections of the website.
+- **Book a Session**: Contact the facility using the phone number provided in the Contact section to book a paintball session.
+- **Explore Packages**: Review the available packages and their pricing in the Packages section.
+- **View Gallery**: Scroll through the gallery to see images of past events and the facility.
+- **Read Reviews**: Check out what others have said about their experiences in the Testimonials section.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Contributing
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Contributions are welcome! If you have suggestions or improvements, please create an issue or submit a pull request.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## License
 
-## Learn More
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Contact
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+For any questions or inquiries, please contact:
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Compact A.Y.S. Paintball**
+- **Address**: Drumul forestier Pădurea Niculițel, Teliţa 827078, Romania
+- **Phone**: +40 743 861 562
+- **Email**: contact@compactayspaintball.ro

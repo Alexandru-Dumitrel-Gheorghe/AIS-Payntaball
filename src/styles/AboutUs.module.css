@@ -1,0 +1,129 @@
+.aboutUsSection {
+  position: relative;
+  padding: 60px 20px;
+  background-color: #1e1e1e; /* Fundal întunecat */
+  color: #f0f0f0; /* Text deschis pentru contrast */
+  overflow: hidden; /* Asigură că overlay-ul nu depășește secțiunea */
+}
+
+.aboutUsSection::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://images.unsplash.com/photo-1588432815128-363254491e4e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.4; /* Semi-transparent pentru a permite textului să fie citit ușor */
+  z-index: 1;
+  backdrop-filter: blur(8px); /* Blur pentru a crea un efect de adâncire */
+}
+
+.content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.6
+  ); /* Fundal semi-transparent pentru conținut */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  z-index: 2; /* Asigură că textul și imaginile sunt deasupra overlay-ului */
+}
+
+.textContainer {
+  flex: 1;
+  padding-right: 40px;
+}
+
+.textContainer h2 {
+  font-size: 40px;
+  color: #ff4a4a;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.textContainer p {
+  font-size: 20px;
+  color: #ccc;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.imageContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageContainer img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 7px 20px 5px #00000088;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imageContainer img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px 10px #000000aa;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .textContainer {
+    padding-right: 0;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .imageContainer img {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .textContainer h2 {
+    font-size: 32px;
+  }
+
+  .textContainer p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutUsSection {
+    padding: 30px 10px;
+  }
+
+  .textContainer h2 {
+    font-size: 28px;
+  }
+
+  .textContainer p {
+    font-size: 16px;
+  }
+
+  .imageContainer img {
+    max-width: 100%;
+  }
+}
