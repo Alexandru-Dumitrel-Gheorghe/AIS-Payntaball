@@ -6,7 +6,7 @@
 }
 
 .galleryTitle {
-  font-size: 2.5em;
+  font-size: 48px;
   margin-bottom: 20px;
   color: #ff4a4a;
   text-transform: uppercase;
@@ -18,28 +18,35 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  width: 100%;
   max-width: 800px;
   margin: 0 auto;
+  padding: 0 10px;
 }
 
 .prevButton,
 .nextButton {
-  background-color: #ff4a4a;
+  background-color: rgba(0, 0, 0, 0.5);
   border: none;
   color: white;
   font-size: 24px;
-  min-width: 50px; /* Utilizează min-width și min-height pentru a păstra proporțiile */
-  min-height: 50px;
-  width: 50px; /* Lățime și înălțime pentru a asigura proporții constante */
-  height: 50px;
-  border-radius: 50%; /* 50% pentru a face butonul perfect rotund */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
   cursor: pointer;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   z-index: 10;
   transition: background-color 0.3s ease, transform 0.3s ease;
-  box-sizing: border-box; /* Asigură-te că dimensiunile sunt calculate corect */
+  opacity: 0.7;
+}
+
+.prevButton:hover,
+.nextButton:hover {
+  background-color: rgba(230, 0, 92, 0.8);
+  transform: translateY(-50%) scale(1.1);
+  opacity: 1;
 }
 
 .prevButton {
@@ -50,52 +57,234 @@
   right: 10px;
 }
 
-.prevButton:hover,
-.nextButton:hover {
-  background-color: #e6005c;
-  transform: translateY(-50%) scale(1.1); /* Ușor efect de zoom la hover */
-}
-
 .slide {
+  position: relative;
   width: 100%;
-  height: 500px;
   overflow: hidden;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
+.slide::before {
+  content: "";
+  display: block;
+  padding-top: 56.25%; /* Aspect ratio 16:9 */
+}
+
 .image {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-/* Media Queries */
+.image:hover {
+  transform: scale(1.02);
+}
+
+.dotsContainer {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-wrap: wrap; /* Permite punctelor să se așeze pe mai multe rânduri */
+  justify-content: center; /* Centrează punctele */
+  max-width: 90%; /* Limitează lățimea maximă a containerului */
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 5px 3px; /* Ajustăm marginile pentru a economisi spațiu */
+  background-color: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot:hover {
+  background-color: #ff4a4a;
+}
+
+.active {
+  background-color: #ff4a4a;
+}
+
+.autoplayButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  opacity: 0.7;
+}
+
+.autoplayButton:hover {
+  opacity: 1;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modalImage {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.closeModal {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.closeModal:hover {
+  color: #ff4a4a;
+}
+
+.modalPrevButton,
+.modalNextButton {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 40px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  opacity: 0.7;
+}
+
+.modalPrevButton:hover,
+.modalNextButton:hover {
+  background-color: rgba(230, 0, 92, 0.8);
+  transform: translateY(-50%) scale(1.1);
+  opacity: 1;
+}
+
+.modalPrevButton {
+  left: 20px;
+}
+
+.modalNextButton {
+  right: 20px;
+}
+
+/* Media Queries pentru mobile */
 @media (max-width: 768px) {
   .galleryTitle {
-    font-size: 2em;
+    font-size: 36px;
   }
 
-  .slide {
-    height: 400px;
-  }
-}
-
-@media (max-width: 480px) {
-  .galleryTitle {
-    font-size: 1.5em;
-  }
-
-  .slide {
-    height: 300px;
+  .slide::before {
+    padding-top: 75%; /* Aspect ratio 4:3 */
   }
 
   .prevButton,
   .nextButton {
-    min-width: 40px;
-    min-height: 40px;
+    font-size: 20px;
+    width: 35px;
+    height: 35px;
+    opacity: 0.8;
+  }
+
+  .prevButton {
+    left: 5px;
+  }
+
+  .nextButton {
+    right: 5px;
+  }
+
+  .dot {
+    height: 10px;
+    width: 10px;
+    margin: 4px 2px;
+  }
+
+  .modalPrevButton,
+  .modalNextButton {
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .modalPrevButton {
+    left: 10px;
+  }
+
+  .modalNextButton {
+    right: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .prevButton,
+  .nextButton {
+    display: none;
+  }
+
+  .galleryTitle {
+    font-size: 28px;
+  }
+
+  .slide::before {
+    padding-top: 100%; /* Aspect ratio 1:1 */
+  }
+
+  .dotsContainer {
+    bottom: 10px;
+  }
+
+  .dot {
+    height: 8px;
+    width: 8px;
+    margin: 3px 2px;
+  }
+
+  .modalPrevButton,
+  .modalNextButton {
+    font-size: 24px;
     width: 40px;
     height: 40px;
+  }
+
+  .modalPrevButton {
+    left: 5px;
+  }
+
+  .modalNextButton {
+    right: 5px;
   }
 }

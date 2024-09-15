@@ -53,9 +53,9 @@ const Header = () => {
           className={`${styles.hamburger} ${isOpen ? styles.open : ""}`}
           onClick={toggleMenu}
         >
-          <div className={styles.bar}></div>
-          <div className={styles.bar}></div>
-          <div className={styles.bar}></div>
+          <span className={styles.bar}></span>
+          <span className={styles.bar}></span>
+          <span className={styles.bar}></span>
         </div>
       </div>
     </header>

@@ -1,24 +1,10 @@
+/* Stiluri generale */
 .aboutUsSection {
   position: relative;
-  padding: 60px 20px;
-  background-color: #1e1e1e; /* Fundal întunecat */
-  color: #f0f0f0; /* Text deschis pentru contrast */
-  overflow: hidden; /* Asigură că overlay-ul nu depășește secțiunea */
-}
-
-.aboutUsSection::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("https://images.unsplash.com/photo-1588432815128-363254491e4e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-  background-size: cover;
-  background-position: center;
-  opacity: 0.4; /* Semi-transparent pentru a permite textului să fie citit ușor */
-  z-index: 1;
-  backdrop-filter: blur(8px); /* Blur pentru a crea un efect de adâncire */
+  padding: 80px 20px;
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+  overflow: hidden;
 }
 
 .content {
@@ -29,16 +15,20 @@
   max-width: 1200px;
   margin: 0 auto;
   flex-wrap: wrap;
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.6
-  ); /* Fundal semi-transparent pentru conținut */
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  z-index: 2; /* Asigură că textul și imaginile sunt deasupra overlay-ului */
+  z-index: 2;
+}
+
+.content::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 1000px;
+  height: 1000px;
+  background: radial-gradient(circle at center, #ff4a4a 0%, transparent 70%);
+  opacity: 0.1;
+  transform: rotate(45deg);
+  z-index: -1;
 }
 
 .textContainer {
@@ -47,12 +37,22 @@
 }
 
 .textContainer h2 {
-  font-size: 40px;
+  font-size: 48px;
   color: #ff4a4a;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  letter-spacing: 3px;
+  position: relative;
+}
+
+.textContainer h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 60px;
+  height: 4px;
+  background-color: #ff4a4a;
 }
 
 .textContainer p {
@@ -73,20 +73,21 @@
   width: 100%;
   max-width: 500px;
   height: auto;
-  border-radius: 10px;
-  box-shadow: 0 7px 20px 5px #00000088;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
 .imageContainer img:hover {
   transform: scale(1.05);
-  box-shadow: 0 10px 30px 10px #000000aa;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
 }
 
 /* Media Queries */
 @media (max-width: 1024px) {
   .content {
     flex-direction: column;
+    padding: 0 20px;
   }
 
   .textContainer {
@@ -101,8 +102,12 @@
 }
 
 @media (max-width: 768px) {
+  .aboutUsSection {
+    padding: 60px 20px;
+  }
+
   .textContainer h2 {
-    font-size: 32px;
+    font-size: 36px;
   }
 
   .textContainer p {
@@ -112,11 +117,11 @@
 
 @media (max-width: 480px) {
   .aboutUsSection {
-    padding: 30px 10px;
+    padding: 40px 10px;
   }
 
   .textContainer h2 {
-    font-size: 28px;
+    font-size: 30px;
   }
 
   .textContainer p {

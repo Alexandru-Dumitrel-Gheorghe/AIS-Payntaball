@@ -1,47 +1,66 @@
-/* Contact.module.css */
-
+/* Stiluri generale */
 .contactSection {
-  padding: 60px 20px;
-  background-color: #282c34;
+  padding: 80px 20px;
+  background-color: #1e1e1e;
   color: #fff;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+  font-family: "Arial", sans-serif;
 }
 
 .sectionTitle {
   font-size: 2.5em;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   color: #ff4a4a;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
+/* Container contact */
 .contactContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 30px;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
-  background-color: #1e1e1e;
-  padding: 40px;
+  background-color: #282c34;
+  padding: 50px;
   border-radius: 15px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  border: 2px solid #ff4a4a;
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.5);
+  position: relative;
 }
 
+.contactContainer::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle at center, #ff4a4a 0%, transparent 70%);
+  opacity: 0.1;
+  transform: rotate(-45deg);
+  z-index: -1;
+}
+
+/* Informații de contact */
 .contactInfo {
   text-align: left;
+  width: 100%;
 }
 
 .contactInfo h3 {
   font-size: 2em;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   color: #ff4a4a;
 }
 
 .contactInfo p {
   font-size: 1.2em;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   display: flex;
   align-items: center;
   color: #ddd;
@@ -50,7 +69,7 @@
 .icon {
   font-size: 1.5em;
   color: #ff4a4a;
-  margin-right: 10px;
+  margin-right: 15px;
 }
 
 .phoneLink {
@@ -63,18 +82,22 @@
   color: #ff6f6f;
 }
 
+/* Mesaj */
 .message {
-  font-size: 1.1em;
-  line-height: 1.6;
+  font-size: 1.2em;
+  line-height: 1.8;
   background-color: rgba(255, 255, 255, 0.1);
-  padding: 20px;
+  padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  color: #eee;
 }
 
+/* Media Queries */
 @media (max-width: 768px) {
   .contactContainer {
-    padding: 30px;
+    padding: 40px;
   }
 
   .contactInfo h3 {
@@ -82,12 +105,12 @@
   }
 
   .contactInfo p {
-    font-size: 1em;
+    font-size: 1.1em;
   }
 
   .message {
-    font-size: 1em;
-    padding: 15px;
+    font-size: 1.1em;
+    padding: 25px;
   }
 }
 
@@ -97,14 +120,20 @@
   }
 
   .contactInfo h3 {
-    font-size: 1.5em;
+    font-size: 1.6em;
   }
 
   .contactInfo p {
-    font-size: 0.9em;
+    font-size: 1em;
+  }
+
+  .icon {
+    font-size: 1.3em;
+    margin-right: 10px;
   }
 
   .message {
-    font-size: 0.9em;
+    font-size: 1em;
+    padding: 20px;
   }
 }

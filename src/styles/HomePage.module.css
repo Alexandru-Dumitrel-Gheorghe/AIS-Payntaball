@@ -1,0 +1,22 @@
+/* HomePage.module.css */
+
+.scrollTopButton {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #ff4a4a;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1000;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+.scrollTopButton:hover {
+  background-color: #d83c3c;
+}
