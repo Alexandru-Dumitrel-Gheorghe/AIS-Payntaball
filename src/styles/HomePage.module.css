@@ -14,9 +14,34 @@
   cursor: pointer;
   z-index: 1000;
   outline: none;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .scrollTopButton:hover {
   background-color: #d83c3c;
+  transform: translateY(-5px);
+}
+
+/* Media Queries */
+
+/* Pentru ecrane medii (tablete) */
+@media (max-width: 768px) {
+  .scrollTopButton {
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    font-size: 22px;
+  }
+}
+
+/* Pentru ecrane mici (telefoane mobile) */
+@media (max-width: 480px) {
+  .scrollTopButton {
+    bottom: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
 }
